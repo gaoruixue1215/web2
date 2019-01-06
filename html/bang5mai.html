@@ -32,7 +32,7 @@
 					<input type="text" placeholder="输入商品网址或关键字，直通全网，快速帮5购！" class="in1">
 					<button class="but1">搜全网</button>
 					<div class="box4">
-						<img src="../img/01.png" alt="">
+						<img src="../img/01.png" alt="" style="margin-left: 10px;">
 						<p style="height: 10px;font-size:10px;color: #9a9791;margin-left: 8px;">400-085-0505</p>
 					</div>
 					<div class="box5">
@@ -246,6 +246,10 @@
 					<input type="text" placeholder="请输入手机号" class="in2">
 					<div class="box9_1_3_3_2">
 						<select name="" id="money">
+							<option value="10">10</option>
+							<option value="30" selected="checked">30</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
 						</select>
 						<span id="money1"></span>
 					</div>
@@ -333,9 +337,11 @@
 		<img src="../img/xiaobang.png" alt="" >
 	</div>
 	<div id="right2">
-		<img src="../img/youhui.png" alt="">
-		<p id="right02">未登录</p>
-		<button id="right00">登录</button>
+		<img src="../img/youhui.png" style="float: left;">
+		<div class="right02">
+			<p>未登录</p>
+			<button>登录</button>
+		</div>		
 	</div>
 	<div id="right3">
 		<img src="../img/app.png" alt="">
@@ -478,18 +484,6 @@
 	    }
 
 	    /*充值*/
-	    var opt=document.createElement("option");
-		opt.innerHTML = 30;
-		document.getElementById("money").insertBefore(opt,null);
-		var opt=document.createElement("option");
-		opt.innerHTML = 10;
-		document.getElementById("money").insertBefore(opt,null);
-		var opt=document.createElement("option");
-		opt.innerHTML = 50;
-		document.getElementById("money").insertBefore(opt,null);
-		var opt=document.createElement("option");
-		opt.innerHTML = 100;
-		document.getElementById("money").insertBefore(opt,null);
 		var money = document.getElementById("money");
 		var money1 = document.getElementById("money1");
 		money.onclick=function(){
@@ -504,8 +498,7 @@
 		var right2 = document.getElementById("right2");
 		var right3 = document.getElementById("right3");
 		var right4 = document.getElementById("right4");
-		var right02 = document.getElementById("right02");
-		var right00 = document.getElementById("right00");
+		var right03 = document.getElementById("right03");
 
 		var right11 = parseInt(getStyle(right1,'right'));
 		right1.onmouseover=function(){		
@@ -526,9 +519,13 @@
 		var right13 = parseInt(getStyle(right3,'right'));
 		right3.onmouseover=function(){		
 			right3.style.right = 0 +'px';
+			right03.style.margin = 0;
+			right03.setAttribute('src','../img/erwei.png');
 		}
 		right3.onmouseout = function(){
 			right3.style.right = right13 + 'px';
+			right03.style.margin = "55px 10px 25px 10px";
+			right03.setAttribute('src','../img/serwei.png');
 		}
 
 		var right14 = parseInt(getStyle(right4,'right'));
@@ -537,30 +534,6 @@
 		}
 		right4.onmouseout = function(){
 			right4.style.right = right14 + 'px';
-		}
-
-		var right021 = parseInt(getStyle(right02,'right'));
-		right02.onmouseover=function(){		
-			right02.style.right = 60 +'px';
-		}
-		right02.onmouseout = function(){
-			right02.style.right = right021 + 'px';
-		}
-
-		var right001 = parseInt(getStyle(right00,'right'));
-		right00.onmouseover=function(){		
-			right00.style.right = 60 +'px';
-		}
-		right00.onmouseout = function(){
-			right00.style.right = right001 + 'px';
-		}
-
-		var right03 = document.getElementById("right03");
-		right03.onmouseover=function(){		
-			right03.setAttribute(src,"img/erwei.png");
-		}
-		right03.onmouseout = function(){
-			right03.setAttribute(src,"img/serwei.png");
 		}
 
 		/*顶部悬浮*/
@@ -577,6 +550,6 @@
 				}
 			}
 		}
-</script>
+	</script>
 </body>
 </html>

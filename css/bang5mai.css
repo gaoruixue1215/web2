@@ -83,8 +83,8 @@ a{
 }
 .box4{
 	margin-top: 16px;
-	margin-left: 85px;
-	width: 82px;
+	margin-left: 78px;
+	width: 90px;
 	height: 40px;
 	border: 1px solid #e7e6e3;
 	border-radius: 3px;
@@ -291,16 +291,15 @@ a{
 	cursor: pointer;
 	top: 150px;
 	position: absolute;
-	/* display: none; */
 	opacity: 0;
 }
 #left{
 	left: 15px;
-	background:url(img/btn.gif) no-repeat 0 0 ;
+	background:url(../img/btn.gif) no-repeat 0 0 ;
 }
 #right{
 	right: 15px;
-	background:url(img/btn.gif) no-repeat 0 -60px ;
+	background:url(../img/btn.gif) no-repeat 0 -60px ;
 }
 .nav{
 	position: absolute;
@@ -541,21 +540,27 @@ a{
 	right: -140px;
 	float: left;
 }
-#right02{
-	margin-left: 100px;
-	margin-top: 50px;
-	position: fixed;
-	top: 200px;
-	right: -60px;
+.right02{
+	margin-left: 20px;
+	width: 70px;
+	height: 140px;
+	background-color: #fd9a6e;
 	float: left;
 }
-#right00{
-	margin-left: 100px;
-	margin-top: 50px;
-	position: fixed;
-	top: 250px;
-	right: -65px;
-	float: left;
+.right02 p{
+	text-decoration: none;
+	color: black;
+	padding: 50px 0 10px 0;
+	font-size: 12px;
+}
+.right02 button{
+	margin-bottom: 20px;
+	border:1px solid white;
+	background-color: #fd9a6e;
+	font-size: 12px;
+	width: 40px;
+	height: 18px;
+	color: white;
 }
 #right3{
 	width: 180px;
@@ -569,7 +574,6 @@ a{
 #right03{
 	margin: 55px 10px 25px 10px;
 }
-
 #right4{
 	position: fixed;
 	top: 510px;

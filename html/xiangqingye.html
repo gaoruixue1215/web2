@@ -30,7 +30,7 @@
 			<input type="text" placeholder="输入商品网址或关键字，直通全网，快速帮5购！" class="in1">
 			<button class="but1">搜全网</button>
 			<div class="box4">
-				<img src="../img/01.png" alt="">
+				<img src="../img/01.png" alt="" style="margin-left: 10px;">
 				<p style="height: 10px;font-size:10px;color: #9a9791;margin-left: 8px;">400-085-0505</p>
 			</div>
 			<div class="box5">
@@ -67,7 +67,7 @@
 				<li><a href="#">韩国直邮</a></li>
 				<li><a href="#">跨境购</a></li>
 			</ul>
-			<img src="img/ff_03.jpg" alt="" style="float:left;">
+			<img src="../img/ff_03.jpg" alt="" style="float:left;">
 		</div>
 	</div>
 	<!-- 中间 -->
@@ -76,6 +76,7 @@
 			<p class="bb02">首页>美容护肤/美体/精油>防晒>韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
 			<div class="bb3">
 				<div class="bb4">
+					<!-- 放大镜 -->
 					<div id="bb5">
 						<div id="cc1">
 							<img src="../img/pp0.jpeg" id="scc">
@@ -101,7 +102,40 @@
 					<p class="bb7">【限购3件】超透明无痕防晒，防水防汗定妆，保湿降温不黏腻。水晶防晒喷雾，喷后皮肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
 					<p class="bb8">价格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 14px;color: red;">¥71</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 10px;color: black;text-decoration: line-through;">¥150</span></p>
 					<img src="../img/ss_09.jpg" alt="">
-
+					<div style="height: 32px;padding-top: 2px;">
+						<div style="padding: 3px 0 0 20px;width: 73px;float: left;">
+							<p style="font-size: 12px;">化妆品净含量</p>
+						</div>
+						<div style="width: 138px;height: 32px;float: left;padding-left: 26px;">
+							<div  id="ch1" class="dd1">
+								<p class="pp1">150ml</p>
+							</div>
+							<div id="ch2" class="dd2" >
+								<p class="pp2">200ml</p>
+							</div>
+						</div>
+					</div>
+					<div style="height: 32px;margin-top: 20px;">
+						<div class="ss1">
+							<p style="font-size: 12px;">数量</p>
+						</div>
+						<div class="ss2">
+							<span id="nn1" class="nn1">-</span>
+							<input id="num" type="text" name=""  value="1" class="nn2">
+							<span id="nn3" class="nn3">+</span>
+						</div>
+						<p style="font-size: 12px;padding: 6px 0 0 250px;">件（库存5件）</p>
+					</div>
+					<div style="margin-right:100px;height:50px;">
+						<img src="../img/oo_03.jpg" alt="">
+					</div>
+					<div id="ch" style="height:20px;">
+						<p style="font-size: 12px;padding: 2px 0 0 104px;float: left;">您已选择</p>
+					</div>
+					<div style="height: 42px;padding: 20px 0 0  20px;">
+						<button class="button1">立即购买</button>
+						<button id="btn" class="button2">加入购物车</button>
+					</div>
 				</div>
 			</div>
 			<img src="../img/ww_07.jpg" alt="" style="float: left;margin-left: 5px;">
@@ -181,7 +215,17 @@
 		<img src="../img/bo6.png" alt="">
 		<img src="../img/bo7.png" alt="">
 	</div>
-
+	<!-- 加入购物车 -->
+	<div id="add1" class="add1">
+		<div class="add2">
+			<div style="height: 16px;margin: 10px 0 0 370px;" id="a">X</div>
+			<img src="../img/rr11_02.jpg">
+			<div style="height: 42px;padding: 16px 0 0 30px;">
+				<button id='but3' class="button1">继续购物</button>
+				<button id='but4' class="button2">去购物车结算</button>
+			</div>
+		</div>
+	</div>
 	<script>
 		//放大镜
 		var bb5=document.getElementById('bb5');
@@ -230,6 +274,66 @@
 			c1.style.border="0";
 			scc.setAttribute('src','../img/pp1.jpeg');
 			bcc.setAttribute('src','../img/pp1.jpeg');
+		}
+
+		//化妆品净含量
+		var ch1=document.getElementById('ch1');
+		var ch2=document.getElementById('ch2');
+		var ch=document.getElementById('ch');
+		var p=document.createElement('p');
+	 	ch.appendChild(p);
+	 	p.setAttribute('style','height:16px;float:left;font-size:16px;color:#ff9003;padding-left:20px;');
+		ch1.onclick=function(){
+			ch1.style.border="1px solid red";
+			ch1.style.background="url(../img/duigou.png) 50px 18px no-repeat";
+			p.innerHTML='"150ml"';
+			ch2.style.border=0;
+			ch2.style.backgroundImage = "none";
+		}
+		ch2.onclick=function(){
+			ch1.style.border=0;
+			ch1.style.backgroundImage = "none";
+			ch2.style.border="1px solid red";
+			ch2.style.background="url(../img/duigou.png) 50px 18px no-repeat";
+			p.innerHTML='"200ml"';
+		}
+		//数量加减
+	    var nn1=document.getElementById('nn1');
+	    var nn3=document.getElementById('nn3');
+	    var num=document.getElementById('num');
+		nn1.onclick = function(){
+			nn1.style.cursor="pointer";
+			if(num.value>1){
+				num.value--;
+			}else if(num.value==1){
+				nn1.style.cursor="not-allowed";
+			}
+		}
+		nn3.onclick=function(){
+	    	nn3.style.cursor="pointer";
+	    	if(num.value<5){
+	    		num.value++;
+	    	}else if(num.value==5){
+				nn3.style.cursor="not-allowed";
+			}
+	    }
+	 	//加购物车
+		var btn=document.getElementById('btn');
+		var add1=document.getElementById('add1');
+		var a=document.getElementById('a');
+		var but3=document.getElementById('but3');
+		var but4=document.getElementById('but4');
+		btn.onclick=function(){
+			add1.style.display='block';
+		}
+		but3.onclick=function(){
+			add1.style.display='none';
+		}
+		but4.onclick=function(){
+			add1.style.display='none';
+		}
+		a.onclick=function(){
+			add1.style.display='none';
 		}
 	</script>
 </body>
